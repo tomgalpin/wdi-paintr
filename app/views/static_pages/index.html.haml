@@ -1,1 +1,26 @@
+/ HomeworK:
+/ find 'Add image url' form,
+/ add many of different images (like color swatches),
+/ click on the imgage and render/set that image as the background of the canvas
+
 %h1 Paintr
+
+#selected_color.box
+
+#color_form
+  = text_field_tag 'color', nil, :autofocus => true
+  = button_tag 'Add Color', :id => 'add_color'
+
+#colors
+
+%p Find an image online and add the url to the form below:
+
+#image_form
+  = text_field_tag 'image', nil, :autofocus => true
+  = button_tag 'Add Image URL', :id => 'add_image'
+
+#images
+
+#canvas
+  - 5000.times do
+    .paint_box
